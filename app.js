@@ -27,6 +27,6 @@ app.get('/status', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   log(`Listening on port ${chalk.greenBright(PORT)}`);
 });
