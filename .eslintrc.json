@@ -1,0 +1,22 @@
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": ["react", "import"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "global-require": ["error"],
+    "handle-callback-err": ["error"],
+    "no-console": 1
+  }
+}
