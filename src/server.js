@@ -3,7 +3,9 @@ import chalk from 'chalk';
 import Debug from 'debug';
 import morgan from 'morgan';
 import path from 'path';
-import carsRouter from './routes/cars';
+import ListingReviews from './routes/listingReviews';
+import Sales from './routes/sales';
+import Restaurants from './routes/restaurants';
 const log = Debug('mycoco:app.js');
 
 const app = express();
@@ -11,7 +13,9 @@ const app = express();
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use(express.json());
-app.use('/cars', carsRouter);
+app.use('/listings', ListingReviews);
+app.use('/sales', Sales);
+app.use('/restaurants', Restaurants);
 
 const PORT = process.env.PORT || 3000;
 
